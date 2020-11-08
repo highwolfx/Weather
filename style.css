@@ -1,0 +1,63 @@
+.jumbotron{
+    background-color: black;
+    margin-bottom: 3rem;
+}
+
+
+
+body{
+    background-color: rgb(190, 190, 190);
+    font-family: Roboto, sans-serif;
+}
+
+#header{
+    text-align: center;
+    color: white;
+}
+
+
+
+#search{
+    padding-right: 1rem;
+}
+
+#search-button{
+    background-color: rgb(21, 95, 255);
+    color: white;
+}
+
+#clear-history{
+    margin-bottom: 1.25rem;
+}
+
+#current-weather{
+    margin-top: 2.5rem;
+}
+
+#display-city-weather{
+    padding-top: 0.75rem;
+    padding-left: 2rem;
+}
+
+#current-uv{
+    padding: .3rem;
+    border-radius: 5px;
+}
+
+
+#forecast{
+    margin-top: 2rem;
+}
+
+.forecast-card{
+    padding-top: 1rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    background-color: rgb(0, 128, 255);
+    color: white;
+    align-items: center;
+}
+
+p{
+    font-size: .8rem;
+}
