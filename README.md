@@ -3,37 +3,44 @@
 
 ## Description
 
-This fifth homework assignment was designed to be a task scheduler that allows a user to store their tasks that need to be done throughout the day. It can be used to log tasks that need to be done daily on an hourly time slot. As the time passes during the day, the rows will change color depending on what the time is.
+This sixth homework assignment was designed to be a weather forecaster, where a user could check the current weather data for an specified location, plus the 5-day forecast.
 
 
 ## Installation
 
-Visit the [deployed webpage](https://highwolfx.github.io/Work-Day-Scheduler/) to view the scheduler online.
+Visit the [deployed webpage](https://highwolfx.github.io/Weather/) to view the weather dashboard online.
 
-Otherwise, you can also choose to clone the repo onto your local machine. After cloning the repo, run the index.html file to view the website. The deployed webpage should look like [this](https://raw.githubusercontent.com/highwolfx/Work-Day-Scheduler/main/assets/welcome.jpg).
+Otherwise, you can also choose to clone the repo onto your local machine. After cloning the repo, run the index.html file to view the website. The deployed webpage should look like [this](https://raw.githubusercontent.com/highwolfx/Weather/main/assets/welcome.png).
 
 <p align="center">
-    <img alt="welcome screen" src="https://raw.githubusercontent.com/highwolfx/Work-Day-Scheduler/main/assets/welcome.jpg">
+    <img alt="welcome screen" src="https://raw.githubusercontent.com/highwolfx/Weather/main/assets/welcome.png">
 </p>
 
 
 ## Usage
 
-Deployed webpage can be found [here](https://highwolfx.github.io/Work-Day-Scheduler/).
+Deployed webpage can be found [here](https://highwolfx.github.io/Weather/).
 
-The user is greeted with the [task scheduler](https://raw.githubusercontent.com/highwolfx/Work-Day-Scheduler/main/assets/screenshot.png) screen.
+The user is greeted with the [weather dashboard](https://raw.githubusercontent.com/highwolfx/Weather/main/assets/welcome.png) screen. If there were previously searched cities, they will populate the area under the "Clear City History" button.
+
+They can then input a city in the green box shown above. If an invalid city is inputted an [error message](https://raw.githubusercontent.com/highwolfx/Weather/main/assets/error.png) will pop up prompting the user to try another valid city name. The user can either click the close button or anywhere outside of the message box to dismiss it.
+
+
+After inputting several city names, the screen will look something similar to [this](https://raw.githubusercontent.com/highwolfx/Weather/main/assets/screenshot.png):
 
 <p align="center">
-    <img alt="Intro screen" src="https://raw.githubusercontent.com/highwolfx/Work-Day-Scheduler/main/assets/screenshot.png">
+    <img alt="Dashboard Main" src="https://raw.githubusercontent.com/highwolfx/Weather/main/assets/screenshot.png">
 </p>
 
-In the orange box, the current time and date is displayed, formatted as hour:minute:seconds AM/PM, and the date as day of the week, day-month-year.
+In the red box, more cities can be inputted.
 
-In the red box, the "Clear All Saved Tasks" button clears all the tasks written in the task boxes AND the saved tasks.
+In the yellow box, the "Clear City History" button clears all the cities written in the city history box.
 
-In the blue box, the hour of the work day is shown. When the row is grey, that means that the hour has already passed. When the row is red, that is the current hour. When the row is green, that means that the time has not occured yet.
+In the green box, a history of all the cities searched will be shown. They can be clicked to show the weather conditions of the clicked city. They will be saved in the local storage of the browser upon each search, and will repopulate the area until the "Clear City History" button is pushed.
 
-In the green box, the task that wants to be saved can be typed in the corresponding time row. Once the task content has been filled out, the save button of the corresponding row (the button shown in the purple box) should be pressed to save the task to local storage so it can be loaded later on. Once the task has been saved, it will stay even when the page is reloaded, until it is cleared from local storage via the "Clear All Saved Tasks" button, or the local storage has been cleared.
+In the blue box, the currently searched city will be displayed, along with an icon of the current weather conditions. Underneath is the date of the local machine. Below that is the temperature (in Farenheit), humidity, wind speed (in mph), and UV index of the queried city.
+
+In the purple box, the 5-day forecast of the searched city is shown, along with the date (in DD/MM/YY format), an icon showing the forecasted weather conditions, temperature (in Farenheit), and the humidity.
 
 
 ## License
@@ -45,8 +52,6 @@ Licensed under the [MIT license](LICENSE.txt).
 
 Project components are based off [Bootstrap v5](https://v5.getbootstrap.com/).
 
-Thanks to [w3schools](https://www.w3schools.com/) for information on how to write and modify code.
+Weather API is based off of [OpenWeather API](https://openweathermap.org/) for weather and location data.
 
 Time API is based off of [Day.js](https://day.js.org/) for accurate time keeping.
-
-Original reference code were provided by the [UCSD Coding Bootcamp](https://bootcamp.extension.ucsd.edu/coding/).
