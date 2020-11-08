@@ -68,19 +68,21 @@ function weatherSearch(){
             url: secondURL,
             method: "GET"
         }).then(function(response2) {
-            // console.log(response2);
+            // console.log(response2.current.uvi);
+            
             $("<h5>").html("UV Index: ").attr("id", "uvi").appendTo("#current-conditions");
-            $("<span>").html(response2.current.uvi).attr("id","current-uv").appendTo("#uvi");
+            $("<span>").html(response2.current.uvi).attr("id","current-uv").addClass("uvi").appendTo("#uvi");
+            $("#current-uv").css("background-color","")
             if (0<response2.current.uvi<2.5) {
-                $("#current-uv").css("background-color","green");
-            } if (2.5<=response2.current.uvi<5.5) {
-                $("#current-uv").css("background-color","yellow");
-            } if (5.5<=response2.current.uvi<7.5) {
-                $("#current-uv").css("background-color","orange");
-            } if (7.5<=response2.current.uvi<10) {
-                $("#current-uv").css("background-color","red");
-            } if (10<=response2.current.uvi) {
-                $("#current-uv").css("background-color","purple");
+                $(".uvi").css("background-color","green");
+            }else if (2.5<=response2.current.uvi<5.5) {
+                $(".uvi").css("background-color","yellow");
+            }else if (5.5<=response2.current.uvi<7.5) {
+                $(".uvi").css("background-color","orange");
+            }else if (7.5<=response2.current.uvi<10) {
+                $(".uvi").css("background-color","red");
+            }else if (10<=response2.current.uvi) {
+                $(".uvi").css("background-color","purple");
             };
 
             for(var i=1; i<6; i++){
@@ -105,6 +107,8 @@ function clearResults(){
 }
 
 function clearStorage(){
+    clearResults();
     localStorage.removeItem("Saved Cities");
     $(".list-group").empty();
+    cityArray = [];
 }
