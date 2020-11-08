@@ -68,20 +68,20 @@ function weatherSearch(){
             url: secondURL,
             method: "GET"
         }).then(function(response2) {
-            // console.log(response2.current.uvi);
+            let uvi = response2.current.uvi;
             
             $("<h5>").html("UV Index: ").attr("id", "uvi").appendTo("#current-conditions");
-            $("<span>").html(response2.current.uvi).attr("id","current-uv").addClass("uvi").appendTo("#uvi");
+            $("<span>").html(uvi).attr("id","current-uv").addClass("uvi").appendTo("#uvi");
             $("#current-uv").css("background-color","")
-            if (0<response2.current.uvi<2.5) {
+            if (uvi<2.5) {
                 $(".uvi").css("background-color","green");
-            }else if (2.5<=response2.current.uvi<5.5) {
+            }else if ((2.5<=uvi)&&(uvi<5.5)) {
                 $(".uvi").css("background-color","yellow");
-            }else if (5.5<=response2.current.uvi<7.5) {
+            }else if ((5.5<=uvi)&&(uvi<7.5)) {
                 $(".uvi").css("background-color","orange");
-            }else if (7.5<=response2.current.uvi<10) {
+            }else if ((7.5<=uvi)&&(uvi<10)) {
                 $(".uvi").css("background-color","red");
-            }else if (10<=response2.current.uvi) {
+            }else if (10<=uvi) {
                 $(".uvi").css("background-color","purple");
             };
 
