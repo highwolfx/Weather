@@ -12,15 +12,22 @@
 
 
   <body>
+    <!-- Title -->
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
           <h1 class="display-3" id="header">Weather Dashboard</h1>
         </div>
     </div>
+
+    <!-- Rest of the page -->
     <div class="container">
         <div class="row">
+          
+          <!-- Left Aside -->
             <aside class="col-lg-4" id="search">
                 <h3>Search for a City:</h3>
+
+                <!-- City Input -->
                 <section class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="City Name Here" aria-label="City name" id="city-input">
                     <div class="input-group-append">
@@ -32,12 +39,16 @@
                       </button>
                     </div>
                 </section>
+
+                <!-- CLear city history button -->
                 <button type="button" class="btn btn-danger btn-block" id="clear-history">Clear City History</button>
                 <section>
                   <div class="list-group" id="list-tab" role="tablist" id="city-list">
                   </div>
                 </section>
             </aside>
+
+            <!-- Main Weather Box -->
             <main class="col-lg-8" id="current-weather">
                 <section class="card card-fluid">
                     <div class="card-body" id="display-city-weather">
@@ -50,6 +61,8 @@
                       <section id="current-conditions"></section>
                     </div>
                 </section>
+
+                <!-- 5-Day Forecast -->
                 <section class="card card-fluid" id="forecast">
                   <div class="card-body">
                     <h3>5-Day Forecast:</h3>
@@ -71,6 +84,7 @@
         </div>
     </div>
 
+    <!-- Error Message Modal -->
     <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">

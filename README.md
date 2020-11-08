@@ -23,16 +23,13 @@ Deployed webpage can be found [here](https://highwolfx.github.io/Weather/).
 
 The user is greeted with the [weather dashboard](https://raw.githubusercontent.com/highwolfx/Weather/main/assets/welcome.png) screen. If there were previously searched cities, they will populate the area under the "Clear City History" button.
 
-They can then input a city in the green box shown above. If an invalid city is inputted an [error message](https://raw.githubusercontent.com/highwolfx/Weather/main/assets/error.png) will pop up prompting the user to try another valid city name. The user can either click the close button or anywhere outside of the message box to dismiss it.
-
-
 After inputting several city names, the screen will look something similar to [this](https://raw.githubusercontent.com/highwolfx/Weather/main/assets/screenshot.png):
 
 <p align="center">
     <img alt="Dashboard Main" src="https://raw.githubusercontent.com/highwolfx/Weather/main/assets/screenshot.png">
 </p>
 
-In the red box, more cities can be inputted.
+In the red box, cities can be inputted. If an invalid city is inputted an [error message](https://raw.githubusercontent.com/highwolfx/Weather/main/assets/error.png) will pop up prompting the user to try another valid city name. The user can either click the close button or anywhere outside of the message box to dismiss it.
 
 In the yellow box, the "Clear City History" button clears all the cities written in the city history box.
 
